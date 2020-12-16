@@ -10,13 +10,21 @@ class SearchPage2 extends Page {
     get listmap () { return $('//*[@id="app"]/div[2]/main/div[2]/div/ul/li[2]/div/a[1]/i')}
     get mapicon () { return $('//*[@id="app"]/div[2]/main/div[2]/div/ul/li[2]/div/a[2]/i')}
     get map () { return $('#map > div > div > div:nth-child(1) > div:nth-child(3)')}
+    get profile () { return $('[class=btn_listing]')}
 
     search2 () {
         
        
         this.inputSearchBox.click(); 
         this.searchbar.click();
+       
     }
+
+    viewprofile(){
+        this.profile.click();
+        browser.pause(1000);
+    }
+      
     open () {
         return super.open('https://develop.terapeutica.digital/#/search');
     }

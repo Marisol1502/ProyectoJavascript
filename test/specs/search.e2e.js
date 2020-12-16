@@ -11,8 +11,8 @@ describe('Search', () => {
     })
     it('search without enter data', () => {
         SearchPage.open();
-       
-        browser.getUrl;
+        browser.pause(2000);
+        SearchPage.inputSearchBox.click();
         expect(browser).toHaveUrl('https://develop.terapeutica.digital/#/');
             
     });
